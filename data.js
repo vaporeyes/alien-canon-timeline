@@ -136,7 +136,7 @@ const timelineData = [
     { id: 41, year: 2497, title: "Alien: Colony War", type: "book",
       description: "Political tensions between colonies erupts when Xenomorphs are weaponized in an interstellar conflict." },
 
-    { id: 42, year: 2692, title: "Alien: The Cold Forge", type: "book",
+    { id: 42, year: 2179, title: "Alien: The Cold Forge", type: "book",
       description: "A dying scientist on a remote station attempts to weaponize Xenomorphs while hiding her true agenda from Weyland-Yutani." },
 
     { id: 43, year: 2692, title: "Alien: Prototype", type: "book",
