@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Canon Timeline | Interactive Experience</title>
+    <meta name="description" content="Interactive chronological timeline of the Alien franchise canon including films, games, comics, books, and short films.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">ALIEN CANON TIMELINE</h1>
+            <div class="subtitle">Weyland-Yutani Corp // Classified Chronological Database</div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="filter-controls" id="filterControls">
+                <button class="filter-btn active" data-filter="all">All</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search timeline..." aria-label="Search timeline events">
+            </div>
+            <div class="nav-controls">
+                <button id="navPrev" class="nav-btn" aria-label="Scroll timeline left">&#9668;</button>
+                <button id="navNext" class="nav-btn" aria-label="Scroll timeline right">&#9658;</button>
+                <button id="navReset" class="nav-btn" aria-label="Reset timeline view">Reset View</button>
+            </div>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-viewport" id="timelineViewport">
+            <div class="timeline-container" id="timelineContainer">
+                <svg class="timeline-svg" id="timelineSvg"></svg>
+                <div class="timeline-track" id="timelineTrack"></div>
+                <div class="timeline-events" id="timelineEvents"></div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-backdrop" id="modalBackdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-meta" id="modalMeta"></div>
+                <div class="modal-description" id="modalDescription"></div>
+                <div class="modal-navigation">
+                    <button id="modalPrev" class="modal-nav-btn">← Previous</button>
+                    <button id="modalNext" class="modal-nav-btn">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel" id="statsPanel">
+            <div class="stat-item">
+                <span class="stat-label">Total Events:</span>
+                <span class="stat-value" id="statTotal">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Visible:</span>
+                <span class="stat-value" id="statVisible">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Years Covered:</span>
+                <span class="stat-value" id="statYears">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scanline effect overlay -->
+    <div class="scanline-overlay"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

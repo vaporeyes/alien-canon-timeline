@@ -1,0 +1,27 @@
+# ABOUTME: Git ignore rules for the Alien Canon Timeline project
+# ABOUTME: Excludes OS files, editor configs, and dependency artifacts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Build output
+dist/
+build/
