@@ -23,20 +23,11 @@
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search timeline..." aria-label="Search timeline events">
             </div>
-            <div class="nav-controls">
-                <button id="navPrev" class="nav-btn" aria-label="Scroll timeline left">&#9668;</button>
-                <button id="navNext" class="nav-btn" aria-label="Scroll timeline right">&#9658;</button>
-                <button id="navReset" class="nav-btn" aria-label="Reset timeline view">Reset View</button>
-            </div>
         </div>
 
-        <!-- Timeline Container -->
+        <!-- Timeline (vertical, scrollable) -->
         <div class="timeline-viewport" id="timelineViewport">
-            <div class="timeline-container" id="timelineContainer">
-                <svg class="timeline-svg" id="timelineSvg"></svg>
-                <div class="timeline-track" id="timelineTrack"></div>
-                <div class="timeline-events" id="timelineEvents"></div>
-            </div>
+            <div class="timeline" id="timelineEvents"></div>
         </div>
 
         <!-- Modal -->
@@ -48,8 +39,8 @@
                 <div class="modal-meta" id="modalMeta"></div>
                 <div class="modal-description" id="modalDescription"></div>
                 <div class="modal-navigation">
-                    <button id="modalPrev" class="modal-nav-btn">← Previous</button>
-                    <button id="modalNext" class="modal-nav-btn">Next →</button>
+                    <button id="modalPrev" class="modal-nav-btn">&larr; Previous</button>
+                    <button id="modalNext" class="modal-nav-btn">Next &rarr;</button>
                 </div>
             </div>
         </div>
